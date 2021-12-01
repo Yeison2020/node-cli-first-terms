@@ -6,7 +6,8 @@ console.log("Working with CLI node first steps");
 
 console.log("==================================");
 
-const base = 5;
+// Changing the name creates another file with another set of data
+const base = 4;
 
 let salida = "";
 for (let i = 1; i <= 10; i++) {
@@ -14,7 +15,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 // Here name_file | data that goes inside of the file | checking errors during process
-fs.writeFile("table-5.txt", salida, (error) => {
+fs.writeFile(`table-${base}.txt`, salida, (error) => {
   if (error) throw error;
   console.log("Table have been created");
 });
